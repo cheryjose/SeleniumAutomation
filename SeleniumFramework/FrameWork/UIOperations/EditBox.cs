@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeleniumFramework
+namespace SeleniumFramework.FrameWork.UIOperations
 {
-    public class Class1
+    class EditBox
     {
     }
 }
