@@ -73,16 +73,21 @@
     <Compile Include="FrameWork\UIOperations\EditBox.cs" />
     <Compile Include="FrameWork\UIOperations\Label.cs" />
     <Compile Include="FrameWork\UIOperations\List.cs" />
+    <Compile Include="FrameWork\UIOperations\Navigation.cs" />
+    <Compile Include="ObjectRepository\HomeScreen.cs" />
+    <Compile Include="ObjectRepository\NewsScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Nunit\FameworkTests\ChromeDriverTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Selenium.config" />
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ObjectRepository\" />
-    <Folder Include="Tests\" />
     <Folder Include="Utility\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

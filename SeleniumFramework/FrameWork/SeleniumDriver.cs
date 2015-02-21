@@ -5,17 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Remote;
 using FrameWork = SeleniumFramework.FrameWork;
 
 namespace SeleniumFramework.FrameWork
 {
     public class SeleniumDriver
     {
-        private ChromeOptions chromeOptions;
-        public ChromeDriver ChromeDriver;
+        public RemoteWebDriver WebDriver;
         private enum ChromeOptionsKey
         {
-            ChromeDriverPath
+            ChromeDriverPath,
+            Driver
         }
 
         public enum Driver
@@ -25,13 +26,13 @@ namespace SeleniumFramework.FrameWork
             Firefox
         }
 
-        public SeleniumDriver(Driver driver)
+        public SeleniumDriver()
         {
+            var driver = (Driver)Enum.Parse(typeof(Driver), GetDriverNameFromConfig());
             switch(driver)
             {
                 case Driver.Chrome:
-                    chromeOptions = new ChromeOptions();
-                    ChromeDriver = new ChromeDriver(SetChromeOptions());
+                    WebDriver = new ChromeDriver(GetChromeDriverDirectoryFromConfig(), SetChromeOptions());
                     break;
                 case Driver.Ie:
                     break;
@@ -42,9 +43,20 @@ namespace SeleniumFramework.FrameWork
 
         public ChromeOptions SetChromeOptions()
         {
-            var binaryLocation = ConfigurationManager.AppSettings[ChromeOptionsKey.ChromeDriverPath.ToString()];
-            chromeOptions.BinaryLocation = binaryLocation;
+            var chromeOptions = new ChromeOptions();
             return chromeOptions;
+        }
+
+        public string GetChromeDriverDirectoryFromConfig()
+        {
+            var binaryLocation = ConfigurationManager.AppSettings[ChromeOptionsKey.ChromeDriverPath.ToString()];
+            return binaryLocation;
+        }
+
+        public string GetDriverNameFromConfig()
+        {
+            var driverName = ConfigurationManager.AppSettings[ChromeOptionsKey.Driver.ToString()];
+            return driverName;
         }
     }
 }

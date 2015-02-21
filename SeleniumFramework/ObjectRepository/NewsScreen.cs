@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SeleniumFramework.FrameWork;
 
-namespace SeleniumFramework.FrameWork
+namespace SeleniumFramework.ObjectRepository
 {
-    public class CommonUIOperations
+    public class NewsScreen : CommonUIOperations
     {
 
     }
