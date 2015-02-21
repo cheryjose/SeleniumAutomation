@@ -24,7 +24,8 @@ namespace SeleniumFramework.Tests.Nunit.FameworkTests
         public void ChromeDriverExecuteTest()
         {
             var url = "https://au.yahoo.com";
-            _homeScreen.Navigation.GoToUrl(url);
+            _homeScreen.Browser.Navigation.GoToUrl(url);
+            _homeScreen.NewsScreen.ClickNewsLink();
         }
     }
 }

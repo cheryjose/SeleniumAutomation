@@ -68,12 +68,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FrameWork\UIOperations\Button.cs" />
+    <Compile Include="FrameWork\UIOperations\Link.cs" />
     <Compile Include="FrameWork\UIOperations\CommonOperations.cs" />
     <Compile Include="FrameWork\SeleniumDriver.cs" />
     <Compile Include="FrameWork\UIOperations\EditBox.cs" />
     <Compile Include="FrameWork\UIOperations\Label.cs" />
     <Compile Include="FrameWork\UIOperations\List.cs" />
     <Compile Include="FrameWork\UIOperations\Navigation.cs" />
+    <Compile Include="ObjectRepository\Browser.cs" />
     <Compile Include="ObjectRepository\HomeScreen.cs" />
     <Compile Include="ObjectRepository\NewsScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

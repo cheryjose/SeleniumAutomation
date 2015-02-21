@@ -9,6 +9,16 @@ namespace SeleniumFramework.ObjectRepository
 {
     public class NewsScreen : CommonUIOperations
     {
+        public string NewsLinkXpathId = "//Div/Ul/Li/a[text()='News']";
 
+        public NewsScreen(object webDriver):base(webDriver)
+        {
+
+        }
+
+        public void ClickNewsLink()
+        {
+            Link.ClickLinkByXpath(NewsLinkXpathId);
+        }
     }
 }

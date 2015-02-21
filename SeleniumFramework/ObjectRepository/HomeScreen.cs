@@ -12,13 +12,13 @@ namespace SeleniumFramework.ObjectRepository
     public class HomeScreen 
     {
         private readonly SeleniumDriver _seleniumDriver;
-        public readonly Navigation Navigation;
+        public readonly Browser Browser;
         public readonly NewsScreen NewsScreen;
         public HomeScreen()
         {
             _seleniumDriver = new SeleniumDriver();
-            Navigation = new Navigation(_seleniumDriver.WebDriver);
-            NewsScreen = new NewsScreen();
+            Browser = new Browser(_seleniumDriver.WebDriver);
+            NewsScreen = new NewsScreen(_seleniumDriver.WebDriver);
         }
     }
 }
