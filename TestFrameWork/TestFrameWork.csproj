@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{47AF8587-EE5A-430E-B2A0-AA1CEA03D74C}</ProjectGuid>
+    <ProjectGuid>{47C710D4-A5F3-49A9-AC6F-1FA9EFF02644}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SeleniumFramework</RootNamespace>
-    <AssemblyName>SeleniumFramework</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <RootNamespace>TestFrameWork</RootNamespace>
+    <AssemblyName>TestFrameWork</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,43 +50,37 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebDriver">
-      <HintPath>..\packages\Selenium.WebDriver.2.44.0\lib\net40\WebDriver.dll</HintPath>
-    </Reference>
-    <Reference Include="WebDriver.Support">
-      <HintPath>..\packages\Selenium.Support.2.44.0\lib\net40\WebDriver.Support.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrameWork\UIOperations\Button.cs" />
-    <Compile Include="FrameWork\UIOperations\Link.cs" />
-    <Compile Include="FrameWork\UIOperations\CommonUIOperations.cs" />
-    <Compile Include="FrameWork\SeleniumDriver.cs" />
-    <Compile Include="FrameWork\UIOperations\EditBox.cs" />
-    <Compile Include="FrameWork\UIOperations\Label.cs" />
-    <Compile Include="FrameWork\UIOperations\List.cs" />
-    <Compile Include="FrameWork\UIOperations\Navigation.cs" />
-    <Compile Include="ObjectRepository\HomeScreen.cs" />
-    <Compile Include="ObjectRepository\Browser.cs" />
-    <Compile Include="ObjectRepository\NewsScreen.cs" />
-    <Compile Include="ObjectRepository\UniversalNavigation.cs" />
+    <Compile Include="Factory\Application.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\Nunit\FameworkTests\ChromeDriverTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppBrowser\AppBrowser.csproj">
+      <Project>{075cd371-5a02-443e-bc10-788ff03959f7}</Project>
+      <Name>AppBrowser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App\App.csproj">
+      <Project>{65a7098e-690d-4997-bc07-6b099534e0b8}</Project>
+      <Name>App</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Browser\Browser.csproj">
+      <Project>{4b2b0a70-392f-41c3-895c-6106100e61cc}</Project>
+      <Name>Browser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{c0018131-d284-4b16-a293-e573a11aa173}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utility\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

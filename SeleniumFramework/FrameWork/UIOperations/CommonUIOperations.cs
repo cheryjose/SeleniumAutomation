@@ -13,12 +13,14 @@ namespace SeleniumFramework.FrameWork
         private readonly RemoteWebDriver _webDriver;
         public readonly Navigation Navigation;
         public readonly Link Link;
-        
+        public readonly List List;
+
         public CommonUIOperations(object driver)
         {
             _webDriver = (RemoteWebDriver)driver;
             Navigation = new Navigation(_webDriver);
             Link = new Link(_webDriver);
+            List = new List(_webDriver);
         }
     }
 }

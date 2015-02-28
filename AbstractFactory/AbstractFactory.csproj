@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{47AF8587-EE5A-430E-B2A0-AA1CEA03D74C}</ProjectGuid>
+    <ProjectGuid>{369F9861-D107-4140-A314-21D57FEC9426}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SeleniumFramework</RootNamespace>
-    <AssemblyName>SeleniumFramework</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <RootNamespace>AbstractFactory</RootNamespace>
+    <AssemblyName>AbstractFactory</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,43 +50,31 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebDriver">
-      <HintPath>..\packages\Selenium.WebDriver.2.44.0\lib\net40\WebDriver.dll</HintPath>
-    </Reference>
-    <Reference Include="WebDriver.Support">
-      <HintPath>..\packages\Selenium.Support.2.44.0\lib\net40\WebDriver.Support.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrameWork\UIOperations\Button.cs" />
-    <Compile Include="FrameWork\UIOperations\Link.cs" />
-    <Compile Include="FrameWork\UIOperations\CommonUIOperations.cs" />
-    <Compile Include="FrameWork\SeleniumDriver.cs" />
-    <Compile Include="FrameWork\UIOperations\EditBox.cs" />
-    <Compile Include="FrameWork\UIOperations\Label.cs" />
-    <Compile Include="FrameWork\UIOperations\List.cs" />
-    <Compile Include="FrameWork\UIOperations\Navigation.cs" />
-    <Compile Include="ObjectRepository\HomeScreen.cs" />
-    <Compile Include="ObjectRepository\Browser.cs" />
-    <Compile Include="ObjectRepository\NewsScreen.cs" />
-    <Compile Include="ObjectRepository\UniversalNavigation.cs" />
+    <Compile Include="Africa.cs" />
+    <Compile Include="AnimalWorld.cs" />
+    <Compile Include="Asia.cs" />
+    <Compile Include="Byson.cs" />
+    <Compile Include="Carnivore.cs" />
+    <Compile Include="ContinentFactory.cs" />
+    <Compile Include="Deer.cs" />
+    <Compile Include="Herbivore.cs" />
+    <Compile Include="Lion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\Nunit\FameworkTests\ChromeDriverTests.cs" />
+    <Compile Include="RainDeer.cs" />
+    <Compile Include="TestClass.cs" />
+    <Compile Include="Tiger.cs" />
+    <Compile Include="Zebra.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utility\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
